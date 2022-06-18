@@ -21,12 +21,13 @@ form.addEventListener("submit", function (e) {
   // ALL FORM INPUTS RETURN A STRING
   //console - strings are black, numbers are blue
   const value = parseInt(amount.value);
+  const random = Math.floor(Math.random() * text.length);
 
   // PROBLEMS
   //empty value
   //-1
   //> 9(paragraphs)
-  if(isNaN(value) || value < 0 || value > 9){
-    result.innerHTML = `<p class="result">${text[0]}</p>`;
+  if (isNaN(value) || value < 0 || value > 9) {
+    result.innerHTML = `<p class="result">${text[random]}</p>`;
   }
 });

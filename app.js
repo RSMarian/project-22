@@ -18,4 +18,15 @@ const result = document.querySelector(".lorem-text");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
+  // ALL FORM INPUTS RETURN A STRING
+  //console - strings are black, numbers are blue
+  const value = parseInt(amount.value);
+
+  // PROBLEMS
+  //empty value
+  //-1
+  //> 9(paragraphs)
+  if(isNaN(value) || value < 0 || value > 9){
+    result.innerHTML = `<p class="result">${text[0]}</p>`;
+  }
 });
